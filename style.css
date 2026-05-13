@@ -1,0 +1,177 @@
+:root {
+    --bg-color: #0a0b10;
+    --card-bg: #161b22;
+    --accent-color: #ff4d4d; /* Спортивный красный */
+    --text-main: #e6edf3;
+    --text-dim: #8b949e;
+    --border: 1px solid #30363d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color:aliceblue;
+    line-height: 1.6;
+}
+
+.header {
+    background: rgba(10, 11, 16, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    border-bottom: var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.content-card {
+    background:#b8c5d2;
+    padding: 30px;
+    border-radius: 12px;
+    border: var(--border);
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h4{
+  font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+h5{
+ font-size: 1.8rem;
+    color:brown;
+    margin-bottom: 20px;
+    text-transform: uppercase;   
+}
+
+p {
+    margin-bottom: 15px;
+    color: #0a0b10;
+}
+
+li{
+    color: #0a0b10;
+}
+
+/* Изображения */
+.image-box {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 10px;
+    height: 300px;
+    
+}
+
+.image-group1 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0px;
+    height: 150px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+h6 {
+    color: var(--text-dim);
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Список */
+.main-list {
+    list-style: none;
+}
+
+.main-list li {
+    background: rgba(255, 77, 77, 0.05);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Анимация треугольника (ротора) */
+.visual-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.engine-housing {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #333;
+    border-radius: 45% 55% 45% 55% / 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.rotary-triangle {
+    width: 100px;
+    height: 100px;
+    background: var(--accent-color);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .image-group { flex-direction: column; }
+    h1 { font-size: 1.4rem; }
+}

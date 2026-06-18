@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://prow73747-gif.github.io/Rotary-Engine/sitemap.xml
